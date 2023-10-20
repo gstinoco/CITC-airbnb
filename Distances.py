@@ -22,7 +22,7 @@ def main():
     # Adding new columns to the hotels DataFrame, one for each place, initializing with None (null values)
     for i, place in places_df.iterrows():
         # The column name is composed of a base string and the unique place name
-        hosts_df[f'distance_to_{place["place_name"]}'] = None
+        hosts_df[f'd_t_{place["place_name"]}'] = None
 
     # Iterating over each hotel in the DataFrame to calculate distances
     for i, host in hosts_df.iterrows():
@@ -37,7 +37,7 @@ def main():
             distance = haversine(host_coord, place_coord, unit=Unit.KILOMETERS)
 
             # Storing the calculated distance in the appropriate column of the hotel's DataFrame
-            hosts_df.at[i, f'distance_to_{place["place_name"]}'] = distance
+            hosts_df.at[i, f'd_t_{place["place_name"]}'] = distance
 
     # Saving the updated DataFrame with the new distance information to a new CSV file
     hosts_df.to_csv('hosts_with_distances.csv', index=False)
