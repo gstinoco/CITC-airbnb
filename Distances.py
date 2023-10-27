@@ -22,9 +22,11 @@ Last Modification:
 # Library importation
 import pandas as pd                                                         # Importing pandas library for data manipulation
 from haversine import haversine, Unit                                       # Importing specific functions from the haversine library for distance calculation
+import tarfile
+import os.path
 
 # Main function "Distances"
-def Distances():
+def Distances(hosts = 'Information/hosts.csv', places = 'Information/places.csv', result = 'Results/hosts_with_distances.csv'):
     '''
     In this main function two different files are read. The first "hosts.csv" contains the information of all the airbnbs that you want to study,
     while the second "places.csv" contains the places of interest in the city that you want to study.
@@ -40,9 +42,9 @@ def Distances():
     # Attempt to load the data from CSV files
     try:
         # Reading the hotels file, with latitude and longitude columns, using 'ISO-8859-1' encoding to ensure compatibility with a variety of CSV file encodings.
-        hosts_df = pd.read_csv('hosts.csv', encoding='ISO-8859-1')
+        hosts_df = pd.read_csv(hosts, encoding='ISO-8859-1')
         # Reading the landmarks file with the same encoding
-        places_df = pd.read_csv('places.csv', encoding='ISO-8859-1')
+        places_df = pd.read_csv(places, encoding='ISO-8859-1')
     except UnicodeDecodeError as e:
         # Handling a potential exception that occurs if there is an encoding conflict.
         print(f"An error occurred when reading the CSV files: {e}")
@@ -70,11 +72,23 @@ def Distances():
             hosts_df.at[i, f'd_t_{place["place_name"]}'] = distance
 
     # Saving the updated DataFrame with the new distance information to a new CSV file.
-    hosts_df.to_csv('hosts_with_distances.csv', index=False)
+    hosts_df.to_csv(result, index=False)
 
     # Console message indicating successful completion of the script.
-    print("The distances have been calculated and saved to 'hosts_with_distances.csv'.")
+    print('The distances have been calculated and saved to', result)
+    make_tarfile(result+'.tar.gz',result)
+    print('The file was compressed and saved to', result+'.tar.gz')
 
-# Tun the script as a standalone application
+def make_tarfile(output_filename, source_file):
+    with tarfile.open(output_filename, "w:gz") as tar:
+        tar.add(source_file)
+
+# Run the script as a standalone application
 if __name__ == "__main__":
-    Distances()
+    hosts           = 'Information/hosts.csv'
+    all_places      = 'Information/places.csv'
+    cultural_places = 'Information/cultural_places.csv'
+    all_result      = 'Results/hosts_with_distances.csv'
+    cultural_result = 'Results/hosts_with_distances_cultural.csv'
+    Distances(hosts, all_places, all_result)
+    Distances(hosts, cultural_places, cultural_result)
