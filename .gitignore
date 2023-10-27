@@ -63,3 +63,4 @@ __*
 __pycache__
 
 # On going
+*.csv
