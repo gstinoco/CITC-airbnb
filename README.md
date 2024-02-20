@@ -9,12 +9,12 @@ The codes presented are:
 - [Distances.py](Distances.py): Script for calculating distances between each AirBnB presented in the file [host.csv](Information/hosts.tar.gz).
 - [Correlations.ipynb](Correlations.ipynb): Correlation analysis using and auto explainable Jupyter Notebook.
 
-## Requirements
+## Requirements :exclamation:
 
 To use the content of this repository, it is recommended to have Python 3.x installed, as well as the libraries necessary to run Jupyter Notebooks and the specific calculations performed in the scripts.
 
 
-### Installation of Dependencies
+### Library installation
 
 It is possible to install the necessary dependencies using `pip`:
 
@@ -53,5 +53,5 @@ With the financing of:
   
   - Aula CIMNE-Morelia, México.
 
-## License
+## License :bell:
 This project is distributed under the [MIT License](LICENSE), allowing its use, modification and distribution under the terms of said license.
