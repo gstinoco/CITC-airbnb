@@ -6,7 +6,7 @@ This repository offers scripts and tools to calculate distances within data sets
 
 The codes presented are:
 
-- [Distances.py](Distances.py): Script for calculating distances between each AirBnB presented, in the file [host.csv](Information/hosts.tar.gz), and the places .
+- [Distances.py](Distances.py): Script for calculating distances between each AirBnB presented, in the file [host.csv](Information/hosts.tar.gz), and the places stated in the file [places.csv](Information/places.tar.gz).
 - [Correlations.ipynb](Correlations.ipynb): Correlation analysis using and auto explainable Jupyter Notebook.
 
 ## Requirements :exclamation:
