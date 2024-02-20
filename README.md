@@ -6,8 +6,22 @@ This repository offers scripts and tools to calculate distances within data sets
 
 The codes presented are:
 
-- [Distances.py](Distances.py): Script for calculating distances between each AirBnB presented, in the file [host.csv](Information/hosts.tar.gz), and the places stated in the file [places.csv](Information/places.tar.gz).
-- [Correlations.ipynb](Correlations.ipynb): Correlation analysis using and auto explainable Jupyter Notebook.
+- [Distances.py](/Distances.py): Script for calculating distances between each AirBnB presented, in the file [host.csv](/Information/hosts.tar.gz), and the places stated in the file [places.csv](/Information/places.tar.gz).
+- [Correlations.ipynb](/Correlations.ipynb): Correlation analysis using an auto explainable Jupyter Notebook.
+
+The correlation file presents the information both numerically and in correlation matrices.
+
+Correlation matrix for the first test.                       |
+:-----------------------------------------------------------:|
+![Correlation Test 1](/Results/Correlation_Matrix_1.png)     |
+
+Correlation matrix for the second test.                      |
+:-----------------------------------------------------------:|
+![Correlation Test 2](/Results/Correlation_Matrix_2.png)     |
+
+Correlation matrix for the third test.                       |
+:-----------------------------------------------------------:|
+![Correlation Test 3](/Results/Correlation_Matrix_3.png)     |
 
 ## Requirements :exclamation:
 
@@ -54,4 +68,4 @@ With the financing of:
   - Aula CIMNE-Morelia, México.
 
 ## License :pushpin:
-This project is distributed under the [MIT License](LICENSE), allowing its use, modification and distribution under the terms of said license.
+This project is distributed under the [MIT License](/LICENSE), allowing its use, modification and distribution under the terms of said license.
