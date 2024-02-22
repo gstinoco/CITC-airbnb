@@ -40,7 +40,7 @@ It is possible to install the necessary dependencies using `pip`:
     pip install haversine
 
 ## Researchers :scientist:
-The codes and analyzes were developed by a dedicated team, composed of experts in Marketing, statistics, and data analysis.
+The codes and analyzes were developed by a dedicated team, composed of experts in statistics, data analysis, and international business.
     
   - Dr. Gerardo Tinoco Guerrero<br>
     Universidad Michoacana de San Nicolás de Hidalgo<br>
