@@ -6,8 +6,8 @@ This repository offers scripts and tools to calculate distances within data sets
 
 The codes presented are:
 
-- [Distances.py](/Distances.py): Script for calculating distances between each AirBnB presented, in the file [host.csv](/Information/hosts.tar.gz), and the places stated in the file [places.csv](/Information/places.tar.gz).
-- [Correlations.ipynb](/Correlations.ipynb): Correlation analysis using an auto explainable Jupyter Notebook.
+- [Correlations.py](/Correlations.py): Functions to compute the distances and calculate the correlations in a Python Script as a standalone application.
+- [Correlations.ipynb](/Correlations.ipynb): Functions to compute the distances and calculate the correlations in a Python Script as an auto explainable Jupyter Notebook.
 
 The correlation file presents the information both numerically and in correlation matrices.
 
@@ -34,9 +34,10 @@ It is possible to install the necessary dependencies using `pip`:
 
     pip install numpy
     pip install pandas
-    pip install haversine
     pip install seaborn
     pip install matplotlib
+    pip install tarfile
+    pip install haversine
 
 ## Researchers :scientist:
 The codes and analyzes were developed by a dedicated team, composed of experts in Marketing, statistics, and data analysis.
